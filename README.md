@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏹 Hunt the Wumpus
 
 This is a submission for the 2025 Redmond High School event _Hunt the Wumpus_ by [Matej Stastny](https://github.com/kireiiiiiiii), [Samuel](https://github.com/Snapshot20) and [Moby](https://github.com/MobyWonKenobi) made in Godot 4.2.
@@ -48,3 +49,7 @@ git config --global user.email your-email-here
    - Once the project is loaded in Godot, click the `Play` button to run the game (top left).
 
 You are now ready to start developing and hunting the Wumpus!
+||||||| b8cc454
+=======
+Hello World!
+>>>>>>> 772a56d8527ab947774c6a223b607b7389f30048
