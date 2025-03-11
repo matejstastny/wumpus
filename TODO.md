@@ -7,7 +7,7 @@ This is a task list for the Hunt the Wumpus project.
 - [x] Room layout
 - [x] Player movement between rooms
 - [x] Randomize player spawn position
-- [ ] Random room type determined by a pool of special rooms
+- [x] Random room type determined by a pool of special rooms
 - [ ] Room rendering only on player enter
 
 ## Bugs to Fix
