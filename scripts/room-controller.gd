@@ -20,15 +20,19 @@ func _print_debug():
         for j in room_grid_height:
             print("ROOM: " + room_grid[i][j])
 
-func _physics_process(delta):
-    if Input.is_action_just_pressed("go_left"):
-        _move_player(1, 0)
-    elif Input.is_action_just_pressed("go_right"):
-        _move_player(-1, 0)
-    elif Input.is_action_just_pressed("go_up"):
-        _move_player(0, -1)
-    elif Input.is_action_just_pressed("go_down"):
-        _move_player(0, 1)
+func move_player(_x, _y) -> bool:
+    var can_move_x = false
+    var can_move_y = false
+    if current_room.x + _x >= 0 and current_room.x + _x <= room_grid_width:
+        current_room.x += _x
+        can_move_x = true
+    if current_room.y + _y >= 0 and current_room.y + _y <= room_grid_height:
+        current_room.y += _y
+        can_move_y = true
+    print("Current Room data: " + str(_get_current_room()))
+    print("Current Room pos: " + str(current_room.x) + ", " + str(current_room.y))
+    print("Can Move: " + str(can_move_x))
+    return can_move_x and can_move_y
 
-func _move_player(x, y):
-    pass
+func _get_current_room():
+    return room_grid[current_room.x][current_room.y]
