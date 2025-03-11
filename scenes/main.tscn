@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ktfj0n3howu0"]
+[gd_scene load_steps=3 format=3 uid="uid://ktfj0n3howu0"]
 
 [ext_resource type="Script" path="res://scripts/room-controller.gd" id="1_kn7tx"]
+[ext_resource type="PackedScene" uid="uid://b1lky50k8jl4o" path="res://entities/player.tscn" id="2_8k80g"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kn7tx")
+
+[node name="Player" parent="." instance=ExtResource("2_8k80g")]
+position = Vector2(111, 94)
