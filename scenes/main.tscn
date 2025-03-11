@@ -6,7 +6,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_8k80g")]
-position = Vector2(96, 93)
+position = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="RoomManager" type="Node2D" parent="."]
 unique_name_in_owner = true

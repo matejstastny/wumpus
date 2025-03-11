@@ -4,7 +4,8 @@ extends Node
 @onready var sprite = $Sprite2D
 
 func _ready():
-    pass
+    sprite.position = room_manager.get_init_player_pos()
+    sprite.z_index = 1 # Make sure the player is on top of the room tiles
 
 func _physics_process(_delta):
     var direction = Vector2.ZERO
