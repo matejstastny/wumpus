@@ -1,6 +1,8 @@
 extends Node
 
 
+@onready var player = %Player
+
 var room_size: int = 120
 var room_grid_padding: Vector2 = Vector2(100, 80)
 
@@ -31,16 +33,13 @@ func move_player(_x: int, _y: int) -> bool:
     return can_move_x and can_move_y
 
 
-func get_init_player_pos():
-    return Vector2(room_grid_padding.x, room_grid_padding.y)
-
-
 # ─── Private ───────────────────────────────────────────────────────────────────
 
 
 func _ready():
     _initialize_room_arr()
     _add_room_tiles()
+    _set_player_init_pos()
     _print_room_contents()
 
 
@@ -51,6 +50,14 @@ func _initialize_room_arr():
         for j in range(_room_grid_height):
             _room_grid[i].append(str(i) + " , " + str(j))
 
+
+func _set_player_init_pos():
+    var random_x = randi() % _room_grid_width
+    var random_y = randi() % _room_grid_height
+    _current_room = Vector2(random_x, random_y)
+    var pos = Vector2(room_grid_padding.x + random_x * room_size, room_grid_padding.y + random_y * room_size)
+    player.position = pos
+    print("Player initial position set to: " + str(player.position))
 
 func _add_room_tiles():
     for i in range(_room_grid_width):

@@ -3,11 +3,12 @@
 [ext_resource type="Script" path="res://scripts/room-controller.gd" id="1_kn7tx"]
 [ext_resource type="PackedScene" uid="uid://b1lky50k8jl4o" path="res://entities/player.tscn" id="2_8k80g"]
 
-[node name="Game" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("2_8k80g")]
-position = Vector2(2.08165e-12, 2.08165e-12)
+[node name="Root" type="Node2D"]
 
 [node name="RoomManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_kn7tx")
+
+[node name="Player" parent="." instance=ExtResource("2_8k80g")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, 2.08165e-12)
