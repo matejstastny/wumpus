@@ -22,4 +22,4 @@ func _physics_process(_delta):
 
 func _move(direction):
     if room_manager.move_player(direction.x, direction.y): # Move only if the room allows it (don't if out of bounds of the room)
-        sprite.position += direction * room_manager.room_size
+        sprite.position += direction * room_manager.ROOM_TEXTURE_SIZE
