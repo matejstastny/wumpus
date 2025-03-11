@@ -4,8 +4,10 @@ This is a task list for the Hunt the Wumpus project.
 
 ## Features to Implement
 
-- [ ] Room layout
-- [ ] Player movement between rooms
+- [x] Room layout
+- [x] Player movement between rooms
+- [ ] Random room type determined by a pool of special rooms
+- [ ] Room rendering only on player enter
 
 ## Bugs to Fix
 
@@ -17,6 +19,8 @@ This is a task list for the Hunt the Wumpus project.
   - [ ] MacOS icons (use placeholder)
   - [ ] Windows (32 x 32 pixels)
 - [ ] Game loading screen (1920 x 1080 pixels)
+- [ ] Player sprite
+- [ ] Room sprite
 
 ## Documentation
 
