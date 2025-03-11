@@ -7,15 +7,19 @@ func _ready():
     pass
 
 func _physics_process(_delta):
+    var direction = Vector2.ZERO
     if Input.is_action_just_pressed("move_left"):
-        _move(-1, 0)
+        direction.x = -1
     elif Input.is_action_just_pressed("move_right"):
-        _move(1, 0)
+        direction.x = 1
     elif Input.is_action_just_pressed("move_up"):
-        _move(0, -1)
+        direction.y = -1
     elif Input.is_action_just_pressed("move_down"):
-        _move(0, 1)
+        direction.y = 1
 
-func _move(_x, _y):
-    if room_manager.move_player(_x, _y):
-        sprite.position = Vector2(sprite.position.x + _x * 16, sprite.position.y + _y * 16)
+    if direction != Vector2.ZERO:
+        _move(direction)
+
+func _move(direction):
+    if room_manager.move_player(direction.x, direction.y): # Move only if the room allows it (don't if out of bounds of the room)
+        sprite.position += direction * room_manager.room_size
