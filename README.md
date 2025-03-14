@@ -1,4 +1,4 @@
-# 🏹 Hunt the Wumpus
+# 🏹 Hunt the Wumpus 
 
 This is a submission for the 2025 Redmond High School event _Hunt the Wumpus_ by
 👤 [Matej Stastny](https://github.com/kireiiiiiiii) • 👤 [Samuel](https://github.com/Snapshot20) • 👤 [Moby](https://github.com/MobyWonKenobi)
