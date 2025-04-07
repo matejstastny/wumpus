@@ -6,6 +6,7 @@ Made in **Unity 2023.2**.
 
 🚧 Overview & Game details & Contant & Installation steps under construction! 🚧
 
+Due date: May 5th, 2025
 ---
 
 ## ⚙️ Installation (for developers)
