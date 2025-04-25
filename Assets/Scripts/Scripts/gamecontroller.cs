@@ -13,6 +13,7 @@ public class gamecontroller : MonoBehaviour
     // Start is called before the first frame update
     public GameObject selectedObject;
     public GameObject peicePrefab;
+    public GameObject TilePrefab;
     Vector3 offset;
     private Vector3 targetPos;
     private Peice peiceData;
@@ -24,15 +25,17 @@ public class gamecontroller : MonoBehaviour
     Collider2D targetObject;
     int maxX;
     int maxY;
+    public Tile[][] grid;
     void Start(){
         maxX=15;
         maxY=12;
         for (int x=0; x<=maxX; x++){
             for (int y=0; y<=maxY; y++){
-
+                GameObject tile=Instantiate(TilePrefab);
+                grid[x][y]=tile.GetComponent<Tile>();
             }
         }
-
+        Debug.Log(grid);
         GameObject[] localpeices=GameObject.FindGameObjectsWithTag("Peice");
         foreach(GameObject peice in localpeices){
             pData=peice.GetComponent<Peice>();
