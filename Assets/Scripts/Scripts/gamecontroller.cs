@@ -23,16 +23,17 @@ public class gamecontroller : MonoBehaviour
     private Peice pData;
     Vector3 mousePosition;
     Collider2D targetObject;
-    int maxX;
-    int maxY;
-    public Tile[][] grid;
+    public int maxX;
+    public int maxY;
+    public Tile[,] grid;
     void Start(){
-        maxX=15;
-        maxY=12;
-        for (int x=0; x<=maxX; x++){
-            for (int y=0; y<=maxY; y++){
-                GameObject tile=Instantiate(TilePrefab);
-                grid[x][y]=tile.GetComponent<Tile>();
+        maxX=5;
+        maxY=6;
+        grid=new Tile[maxX,maxY];
+        for (int x=0; x<maxX; x++){
+            for (int y=0; y<maxY; y++){
+                GameObject tile=Instantiate(TilePrefab,new Vector3(hexCodeToCoord(x-maxX/2,y-maxY/2)[0],hexCodeToCoord(x-maxX/2,y-maxY/2)[1],0),transform.rotation);
+                grid[x, y]=tile.GetComponent<Tile>();
             }
         }
         Debug.Log(grid);
@@ -113,7 +114,7 @@ public class gamecontroller : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject.GetComponent<Peice>()!=null)
+            if (targetObject!=null&&targetObject.GetComponent<Peice>()!=null)
             {
                 selectedObject = targetObject.transform.gameObject;
                 orgpos=selectedObject.transform.position;
@@ -176,7 +177,7 @@ public class gamecontroller : MonoBehaviour
         ret[1]=Mathf.RoundToInt(y/(Mathf.Sqrt(3)/2.0f));
         return ret;
     }
-    public float[] hexCodeToCoord(int x, int y){
+    public float[] hexCodeToCoord(float x, float y){
         float[] ret={0,0};
         if(y%2==0){
             ret[0]=x;

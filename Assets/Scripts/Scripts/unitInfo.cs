@@ -23,5 +23,5 @@ public class unitInfo : MonoBehaviour
         info.text="Unit: "+gc.getPeiceData().name+"    Range: 0\nSpeed: "+
         gc.getPeiceData().speed+"	Damage: null\nSide: "+
         gc.getPeiceData().side+"\nHP: 1";
-    }
+        }
 }

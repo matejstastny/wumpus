@@ -1081,7 +1081,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -50
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.050000012, y: 0.185, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1162,6 +1162,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 11
       m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 5
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 7, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 5
       m_TileObjectToInstantiateIndex: 65535
@@ -1373,6 +1383,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 99bd1bddb98e1864ea028aa9ee3db70d, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 85c3cc0983497c342bd6e855fd60319a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 599778f54dd27c242b84cd9b4f880e16, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -2642393358525368334, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
@@ -1408,8 +1420,10 @@ Tilemap:
     m_Data: {fileID: 4773514653529381359, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -6420534950463556919, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1371008660, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -1438,7 +1452,7 @@ Tilemap:
     m_Data: {r: -8.806257e-29, g: -8.806257e-29, b: -8.806257e-29, a: -8.806257e-29}
   - m_RefCount: 0
     m_Data: {r: -8.759784e-29, g: -8.759784e-29, b: -8.759784e-29, a: -8.759784e-29}
-  - m_RefCount: 24
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -2321,7 +2335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 0}
   peicePrefab: {fileID: 7461782768179113274, guid: 3e95170cdf36317498953e14ca141373, type: 3}
+  TilePrefab: {fileID: 7987468847878401462, guid: c127b40cc5ea83648b6dd585324f6201, type: 3}
   turnTrack: 1
+  maxX: 0
+  maxY: 0
 --- !u!1 &1497963394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +3015,7 @@ PrefabInstance:
     - target: {fileID: 8543465798354650293, guid: 58a06d173541b5e4aa446577cee65a01, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7676219313036738927, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
+      objectReference: {fileID: -5351138903708955224, guid: 9f06c3354a02e43e0a105442aa7616a4, type: 3}
     - target: {fileID: 8543465798354650293, guid: 58a06d173541b5e4aa446577cee65a01, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
