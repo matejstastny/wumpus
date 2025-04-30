@@ -34,6 +34,8 @@ public class gamecontroller : MonoBehaviour
             for (int y=0; y<maxY; y++){
                 GameObject tile=Instantiate(TilePrefab,new Vector3(hexCodeToCoord(x-maxX/2,y-maxY/2)[0],hexCodeToCoord(x-maxX/2,y-maxY/2)[1],0),transform.rotation);
                 grid[x, y]=tile.GetComponent<Tile>();
+                grid[x, y].x=x;
+                grid[x, y].y=y;
             }
         }
         Debug.Log(grid);

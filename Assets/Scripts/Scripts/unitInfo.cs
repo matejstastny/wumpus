@@ -20,8 +20,10 @@ public class unitInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(gc!=null){
         info.text="Unit: "+gc.getPeiceData().name+"    Range: 0\nSpeed: "+
         gc.getPeiceData().speed+"	Damage: null\nSide: "+
         gc.getPeiceData().side+"\nHP: 1";
         }
+    }
 }
