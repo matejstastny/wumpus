@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "wumpus.sln"
+    "dotnet.defaultSolution": "Wumpus.sln"
 }
