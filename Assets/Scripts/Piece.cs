@@ -65,7 +65,7 @@ public class Piece : MonoBehaviour
 
     // Accesors -----------------------------------------------------------------
 
-    public int Getreach()
+    public int GetReach()
     {
         return reach;
     }

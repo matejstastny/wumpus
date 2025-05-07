@@ -116,7 +116,7 @@ public class GameController : MonoBehaviour
     {
         if (selectedPiece != null)
         {
-            int movementRange = selectedPieceData.GetSpeed();
+            int movementRange = selectedPieceData.GetReach();
             if (!IsMoveValid(movementRange))
             {
                 UndoMove();

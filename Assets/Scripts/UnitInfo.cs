@@ -19,7 +19,7 @@ public class UsnitInfo : MonoBehaviour
         if (gameController != null)
         {
             info.text = "Unit: " + gameController.GetPieceData().name + "    Range: 0\nSpeed: " +
-            gameController.GetPieceData().speed + "	Damage: null\nSide: " +
+            gameController.GetPieceData().reach + "	Damage: null\nSide: " +
             gameController.GetPieceData().side + "\nHP: 1";
         }
     }
