@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
-    public int speed = 1;
+    public int reach = 1;
     public int side = 1;
     public int startRow;
     public int startColumn;
@@ -19,10 +19,10 @@ public class Piece : MonoBehaviour
 
     // Constructor --------------------------------------------------------------
 
-    public Piece(string name, int speed, int side, int hp, int row, int col)
+    public Piece(string name, int reach, int side, int hp, int row, int col)
     {
         this.name = name;
-        this.speed = speed;
+        this.reach = reach;
         this.side = side;
         startRow = row;
         startColumn = col;
@@ -65,9 +65,9 @@ public class Piece : MonoBehaviour
 
     // Accesors -----------------------------------------------------------------
 
-    public int GetSpeed()
+    public int Getreach()
     {
-        return speed;
+        return reach;
     }
     public bool HasMoved()
     {

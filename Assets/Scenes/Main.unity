@@ -2625,6 +2625,10 @@ PrefabInstance:
       value: Hunter
       objectReference: {fileID: 0}
     - target: {fileID: 4160037595078034120, guid: 58a06d173541b5e4aa446577cee65a01, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160037595078034120, guid: 58a06d173541b5e4aa446577cee65a01, type: 3}
       propertyPath: sideOne
       value: 
       objectReference: {fileID: 2100000, guid: bc5d2cef7f27348509aaae75518993d1, type: 2}
