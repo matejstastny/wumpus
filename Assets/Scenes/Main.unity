@@ -561,9 +561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  sideOne: {fileID: 0}
-  sideTwo: {fileID: 0}
-  sideThree: {fileID: 0}
+  sideOne: {fileID: 2100000, guid: bc5d2cef7f27348509aaae75518993d1, type: 2}
+  sideTwo: {fileID: 2100000, guid: fc4c8d0551b804bccbcc839186b12b01, type: 2}
+  sideThree: {fileID: 2100000, guid: 445007ab13597a14988ee30513fcd540, type: 2}
 --- !u!114 &306498941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  sideOne: {fileID: 2100000, guid: 6c5e50149428cba41a93f54d13cd94f8, type: 2}
+  sideOne: {fileID: 2100000, guid: bc5d2cef7f27348509aaae75518993d1, type: 2}
   sideTwo: {fileID: 2100000, guid: 74911058f2ef9b643ba560a78fbbe058, type: 2}
   sideThree: {fileID: 2100000, guid: 445007ab13597a14988ee30513fcd540, type: 2}
 --- !u!1 &320226926
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3651af25649a98843926b2aee0e7287e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 0}
+  info: {fileID: 526737636}
 --- !u!114 &454738573
 MonoBehaviour:
   m_ObjectHideFlags: 0
