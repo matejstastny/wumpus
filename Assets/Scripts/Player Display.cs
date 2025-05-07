@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+//indicator for who's turn it is
 public class PlayerDisplay : MonoBehaviour
 {
     public Button button;
@@ -41,7 +41,7 @@ public class PlayerDisplay : MonoBehaviour
     }
 
     // Events -------------------------------------------------------------------
-
+    //for debugging
     private void TaskOnClick()
     {
         //transform.Translate(10,10,0);

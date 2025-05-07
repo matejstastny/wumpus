@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+// shows info on selected "unit" on corrisopnding object in text form
 public class UsnitInfo : MonoBehaviour
 {
     [SerializeField] TMP_Text info;

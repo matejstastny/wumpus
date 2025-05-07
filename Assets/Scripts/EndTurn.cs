@@ -1,3 +1,9 @@
+/*
+This file skips to the next "player's" turn when a button is pressed. Therefore I don't think this script does anything at the moment.
+
+
+
+*/
 using UnityEngine;
 using UnityEngine.UI;
 

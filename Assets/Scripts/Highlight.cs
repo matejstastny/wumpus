@@ -1,3 +1,4 @@
+//enables/disables highlight based on selection.
 using UnityEngine;
 
 public class Highlight : MonoBehaviour
