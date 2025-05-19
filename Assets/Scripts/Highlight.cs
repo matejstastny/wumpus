@@ -1,6 +1,6 @@
-//enables/disables highlight based on selection.
 using UnityEngine;
 
+//enables/disables highlight based on selection.
 public class Highlight : MonoBehaviour
 {
     private new GameObject gameObject;
@@ -23,7 +23,7 @@ public class Highlight : MonoBehaviour
         {
             parentID = parentdata.GetID();
         }
-        if (gameController.GetPieceData().id == parentID)
+        if (gameController.GetPieceData() != null && gameController.GetPieceData().id == parentID)
             spriteRenderer.enabled = true;
         else
         {

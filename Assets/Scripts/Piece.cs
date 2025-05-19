@@ -33,7 +33,6 @@ public class Piece : MonoBehaviour
     void Start()
     {
         id = UnityEngine.Random.Range(1, 100000000);
-        Debug.Log(id);
         if (Mathf.Round(startColumn / (Mathf.Sqrt(3) / 2.0f)) * (Mathf.Sqrt(3) / 2.0f) % Mathf.Sqrt(3) == 0)
         {
             transform.position = new Vector2(

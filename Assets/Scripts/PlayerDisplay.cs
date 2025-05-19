@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-//indicator for who's turn it is
+
+// Indicator for who's turn it is
 public class PlayerDisplay : MonoBehaviour
 {
-    public Button button;
-
     public Material sideOne;
     public Material sideTwo;
     public Material sideThree;
@@ -19,8 +18,6 @@ public class PlayerDisplay : MonoBehaviour
     {
         gameObject = GameObject.FindWithTag("GameController");
         gameController = gameObject.GetComponent<GameController>();
-        Button btn = button.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
     }
 
     void Update()
@@ -38,13 +35,5 @@ public class PlayerDisplay : MonoBehaviour
         {
             spriteRenderer.material = sideThree;
         }
-    }
-
-    // Events -------------------------------------------------------------------
-    //for debugging
-    private void TaskOnClick()
-    {
-        //transform.Translate(10,10,0);
-        Debug.Log("You have clicked the button!");
     }
 }
