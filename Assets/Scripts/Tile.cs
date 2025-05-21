@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour
     private int hexCodeX;
     private int hexCodeY;
     private GameObject[] things;
+    public gameObject doorPrefab;
 
     // Main ---------------------------------------------------------------------
 
@@ -41,5 +42,8 @@ public class Tile : MonoBehaviour
         adjacentTiles[2]=gc.grid[(y%2==0)?(x==0)?gc.gridWidth-1:x-1:x,(y==0)?gc.gridHeight-1:y-1];
         adjacentTiles[3]=gc.grid[(y%2==0)?x:(x>gc.gridWidth-2)?0:x+1,(y==0)?gc.gridHeight-1:y-1];
         adjacentTiles[5]=gc.grid[(y%2==0)?x:(x==0)?gc.gridWidth-1:x-1,(y>gc.gridHeight-2)?0:y+1];
+    }
+    private void RenderDoors(int direction){
+        //Instantiate
     }
 }
