@@ -131,3 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbb19a8bd997c24293c4fea46214933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adjacentTiles: []
+  doors: 
+  x: 0
+  y: 0
+  doorPrefab: {fileID: 3807208408770182147, guid: 0f2592cb52dee5043b8411223907d3a7, type: 3}

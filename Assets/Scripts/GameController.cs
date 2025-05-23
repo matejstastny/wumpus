@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour
                 grid[x, y].y = y;
             }
         }
+        grid[0, 0].RecursiveInitializeMaze();
     }
 
     private void InitializePieces()
