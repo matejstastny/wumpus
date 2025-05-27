@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9192720037666450989}
   - component: {fileID: 4160037595078034120}
   m_Layer: 0
-  m_Name: Peice
+  m_Name: PiecePrefab
   m_TagString: Peice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
