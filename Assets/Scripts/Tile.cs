@@ -67,6 +67,22 @@ public class Tile : MonoBehaviour
     // Initilize Maze -------------------------------------------------------------
     public void RecursiveInitializeMaze()
     {
+        bool finialize=CheckForMazeFinalization();
+        int doorToConsider = Random.Range(0, 6);
+        while (adjacentTiles[doorToConsider].DoorNum() < 2&&!finialize)
+        {
+            if (adjacentTiles[doorToConsider].DoorNum() < 5)
+            {
+                doors[doorToConsider] = true;
+                adjacentTiles[doorToConsider].doors[doorToConsider>2?doorToConsider-3:doorToConsider+3] = true;
+                adjacentTiles[doorToConsider].RecursiveInitializeMaze();
+                return;
+            }
+            doorToConsider = Random.Range(0, 5);
+        }
+
+    }
+    private bool CheckForMazeFinalization(){
         bool finialize = true;
         foreach (Tile adjTile in adjacentTiles)
         {
@@ -74,23 +90,12 @@ public class Tile : MonoBehaviour
         }
         if (finialize)
         {
-            foreach (Tile tile in gc.grid)
+            foreach (Tile tileRow in gc.grid)
             {
                 FinializeMaze();
             }
         }
-        int doorToConsider = Random.Range(0, 5);
-        while (adjacentTiles[doorToConsider].DoorNum() < 2)
-        {
-            if (adjacentTiles[doorToConsider].DoorNum() < 2)
-            {
-                doors[doorToConsider] = true;
-                adjacentTiles[doorToConsider].doors[doorToConsider>2?doorToConsider-3:doorToConsider+3] = true;
-                adjacentTiles[doorToConsider].RecursiveInitializeMaze();
-            }
-            doorToConsider = Random.Range(0, 5);
-        }
-
+        return finialize;
     }
     public void FinializeMaze()
     {
