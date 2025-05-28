@@ -10,8 +10,8 @@ public class Tile : MonoBehaviour
 
     private new GameObject gameObject;
     private GameController gc;
-    private int hexCodeX;
-    private int hexCodeY;
+    public int hexCodeX;
+    public int hexCodeY;
     private GameObject[] things;
     public GameObject doorPrefab;
 
@@ -23,6 +23,8 @@ public class Tile : MonoBehaviour
         gameObject = GameObject.FindWithTag("GameController");
         gc = gameObject.GetComponent<GameController>();
         InitializeAdjecentTiles();
+        FinializeMaze();
+        //if (hexCodeX==hexCodeY)RecursiveInitializeMaze();
         //for(int n=0; n<4; n++) RenderDoors(n);// RenderDoors Tester
     }
     // Accesors -----------------------------------------------------------------
@@ -69,16 +71,16 @@ public class Tile : MonoBehaviour
     {
         bool finialize=CheckForMazeFinalization();
         int doorToConsider = Random.Range(0, 6);
-        while (adjacentTiles[doorToConsider].DoorNum() < 2&&!finialize)
+        while (adjacentTiles[doorToConsider].DoorNum() < 1&&!finialize)
         {
-            if (adjacentTiles[doorToConsider].DoorNum() < 5)
+            doorToConsider = Random.Range(0, 6);
+            if (adjacentTiles[doorToConsider].DoorNum() < 1)
             {
                 doors[doorToConsider] = true;
                 adjacentTiles[doorToConsider].doors[doorToConsider>2?doorToConsider-3:doorToConsider+3] = true;
                 adjacentTiles[doorToConsider].RecursiveInitializeMaze();
                 return;
             }
-            doorToConsider = Random.Range(0, 5);
         }
 
     }
@@ -86,20 +88,22 @@ public class Tile : MonoBehaviour
         bool finialize = true;
         foreach (Tile adjTile in adjacentTiles)
         {
-            if (adjTile.DoorNum() < 2) finialize = false;
+            if (adjTile.DoorNum() < 1) finialize = false;
         }
         if (finialize)
         {
-            foreach (Tile tileRow in gc.grid)
+            foreach (Tile tile in gc.grid)
             {
-                FinializeMaze();
+                tile.FinializeMaze();
             }
         }
         return finialize;
     }
     public void FinializeMaze()
     {
-        
+        int doorToConsider = Random.Range(0, 6);
+        doors[doorToConsider] = true;
+        adjacentTiles[doorToConsider].doors[doorToConsider>2?doorToConsider-3:doorToConsider+3] = true;
     }
 
 }
