@@ -1,15 +1,10 @@
-# 🏹 Hunt the Wumpus :)
+# 🏹 Hunt the Wumpus
 
 This is a submission for the 2025 Redmond High School event _Hunt the Wumpus_ by
 👤 [Matej Stastny](https://github.com/kireiiiiiiii) • 👤 [Samuel](https://github.com/Snapshot20) • 👤 [Moby](https://github.com/MobyWonKenobi) • 👤 [Alex](https://github.com/alexchang319)
 Made in **Unity 2023.2**.
 
-🚧 Overview & Game details & Contant & Installation steps under construction! 🚧fbfdsb
-
-Due date: May 5th, 2025
----
-
-## ⚙️ Installation (for developers)
+## ⚙️ Developer Guide
 
 Set up the project for development with the following steps:
 
@@ -62,6 +57,3 @@ When opening the project, Unity Hub will detect the required version (Unity 2023
    - Select the folder and wait for Unity to load the project.
    - If prompted to install missing dependencies or update packages, follow the instructions.
 
----
-
-🎯 You're now ready to start developing! Good luck! 🏹👀
