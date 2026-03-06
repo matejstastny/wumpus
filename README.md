@@ -1,12 +1,15 @@
+<img src="./Assets/Sprites/screens/banner.png" alt="Repo banner" size="100%" />)
+
 # Hunt the Wumpus
 
 A 2D turn-based strategy game built in Unity, submitted for the 2025 Microsoft _Hunt the Wumpus_ event at Redmond High School.
 
 **Team:**
+
 - [Matej Stastny](https://github.com/matejstastny)
-- [Samuel](https://github.com/Snapshot20)
-- [Moby](https://github.com/MobyWonKenobi)
-- [Alex](https://github.com/alexchang319)
+- [Samuel Thiophillus](https://github.com/Snapshot20)
+- [Moby LaForge](https://github.com/MobyWonKenobi)
+- [Alex Chang](https://github.com/alexchang319)
 
 ## Gameplay
 
