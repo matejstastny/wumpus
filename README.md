@@ -1,4 +1,4 @@
-<img src="./Assets/Sprites/screens/banner.png" alt="Repo banner" size="100%" />)
+<img src="./Assets/Sprites/screens/banner.png" alt="Repo banner" size="100%" />
 
 # Hunt the Wumpus
 
